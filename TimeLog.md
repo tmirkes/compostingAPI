@@ -19,6 +19,7 @@
 
 ## Week 12
 - One and a half hour meeting (Monday)
+- Three hour meeting (Wednesday)
+- Six hour meeting (Friday)
 - Abigail: 1 (Updated .war file (AWS), research)
-
-
+- Tim: 23 (Rebuild jsps, entities, resources in new project, testing and refinement, push to new repo, update documentation, generate Javadoc and link to project)

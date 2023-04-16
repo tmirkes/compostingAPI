@@ -12,12 +12,33 @@ Compost Collectors provides a set of standardized services, and invoices could b
   * Access all services
 * servicesV2/{id}
   * Access services by id
+* servicesV3/{name}/{description}
+  * Create new service
+#### Materials
+* materialsV1
+  * Access all materials
+* materialsV2/{id}
+  * Access materials by id
+* materialsV3/{name}/{comments}
+  * Create new material
+#### Periods
+* periodsV1
+  * Access all periods
+* periodsV2/{id}
+  * Access periods by id
+* periodsV3/{frequency}/{time_unit}
+  * Create new period
+#### Prices
+* pricesV1
+  * Access all prices
+* pricesV2/{id}
+  * Access prices by id
+* pricesV3/{cost}/{unit}
+  * Create new price
 
 ### Methods/HTTP Verbs supported:
 GET<br>
-POST (WiP)<br>
-PUT (WiP)<br>
-DELETE (WiP)
+POST<br>
 
 ### Formats supported:
 Plain text<br>

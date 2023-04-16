@@ -22,13 +22,16 @@
 - [x] Construct resource classes (Tim)
 - [x] Update index.jsp to include API call and DB search (Tim)
 - [X] Implement outstanding CRUD functions in GenericDao (Nate)
-- [x] Week 10 exercise? (All)
+- [x] Week 10 exercise (All)
 - [X] Fill out time log (All)
 
 ### Week 12
-- [ ] Research how to request HTML/JSON response in request header (Abigail)
-- [ ] Implement POST/PUT/DELETE verbs in resource classes (Nate/Tim)
-- [ ] Review updated/new classes (review data flow, explain code) (All)
-- [ ] Create presentation
-- [ ] Polish any last minute changes
+- [x] Research how to request HTML/JSON response in request header (Abigail)
+- [x] Implement POST verbs in resource classes (Nate/Tim)
+- [x] Rebuild index.jsp to incorporate GET and POST functions (Tim)
+- [x] Remove database search from index.jsp (Tim)
+- [x] Troubleshoot resource 404 errors (Tim and Abigail)
+- [x] Verify test passing and classes updated accordingly (Abigail)
+- [x] Review updated/new classes (review data flow, explain code) (All)
+- [ ] Create presentation (Abigail)
 - [ ] Fill out time log
