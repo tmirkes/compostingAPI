@@ -1,13 +1,11 @@
 package resource;
 
 import com.google.gson.Gson;
+import entity.Material;
 import entity.Price;
 import persistence.GenericDao;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -66,5 +64,43 @@ public class PricesV2 {
         Price priceData = comPoster.getById(id);
         String formattedData = this.gson.toJson(priceData);
         return Response.status(200).entity(formattedData).build();
+    }
+    /**
+     * Accepts <code>PUT</code> requests, using user-provided data to update an existing <code>Price</code> record.
+     *
+     * @param id existing id
+     * @param perUnit new name
+     * @param unit new comments
+     * @return <code>Response</code> containing result message
+     */
+    @PUT
+    @Path("/alter/{id: [0-9]*}/{perUnit}/{unit}")
+    public Response putRequest(@PathParam("id") int id, @PathParam("perUnit") Double perUnit, @PathParam("unit") String unit) {
+        Price priceToEdit = comPoster.getById(id);
+        priceToEdit.setPerUnit(perUnit);
+        priceToEdit.setUnitType(unit);
+        comPoster.editEntity(priceToEdit);
+        if (comPoster.getById(id) != null) {
+            return Response.status(200).entity("Record " + id + " edited:  " + priceToEdit).build();
+        } else {
+            return Response.status(404).entity("No such record found. Please check the ID and try again.").build();
+        }
+    }
+    /**
+     * Accepts <code>DELETE</code> requests, using user-provided data to delete an existing <code>Price</code> record.
+     *
+     * @param id existing id
+     * @return <code>Response</code> containing result message
+     */
+    @DELETE
+    @Path("/drop/{id: [0-9]*}")
+    public Response deleteRequest(@PathParam("id") int id) {
+        Price priceToDelete = comPoster.getById(id);
+        comPoster.deleteEntity(priceToDelete);
+        if (comPoster.getById(id) == null) {
+            return Response.status(200).entity("Record " + id + " deleted.").build();
+        } else {
+            return Response.status(404).entity("No such record found. Please check the ID and try again.").build();
+        }
     }
 }
