@@ -1,13 +1,11 @@
 package resource;
 
 import com.google.gson.Gson;
+import entity.Material;
 import entity.Period;
 import persistence.GenericDao;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -66,5 +64,43 @@ public class PeriodsV2 {
         Period periodData = comPoster.getById(id);
         String formattedData = this.gson.toJson(periodData);
         return Response.status(200).entity(formattedData).build();
+    }
+    /**
+     * Accepts <code>PUT</code> requests, using user-provided data to update an existing <code>Period</code> record.
+     *
+     * @param id existing id
+     * @param frequency new name
+     * @param timeUnit new comments
+     * @return <code>Response</code> containing result message
+     */
+    @PUT
+    @Path("/alter/{id: [0-9]*}/{frequency}/{timeUnit}")
+    public Response putRequest(@PathParam("id") int id, @PathParam("frequency") int frequency, @PathParam("timeUnit") String timeUnit) {
+        Period periodToEdit = comPoster.getById(id);
+        periodToEdit.setFrequency(frequency);
+        periodToEdit.setTimeUnit(timeUnit);
+        comPoster.editEntity(periodToEdit);
+        if (comPoster.getById(id) != null) {
+            return Response.status(200).entity("Record " + id + " edited:  " + periodToEdit).build();
+        } else {
+            return Response.status(404).entity("No such record found. Please check the ID and try again.").build();
+        }
+    }
+    /**
+     * Accepts <code>DELETE</code> requests, using user-provided data to delete an existing <code>Period</code> record.
+     *
+     * @param id existing id
+     * @return <code>Response</code> containing result message
+     */
+    @DELETE
+    @Path("/drop/{id: [0-9]*}")
+    public Response deleteRequest(@PathParam("id") int id) {
+        Period periodToDelete = comPoster.getById(id);
+        comPoster.deleteEntity(periodToDelete);
+        if (comPoster.getById(id) == null) {
+            return Response.status(200).entity("Record " + id + " deleted.").build();
+        } else {
+            return Response.status(404).entity("No such record found. Please check the ID and try again.").build();
+        }
     }
 }
