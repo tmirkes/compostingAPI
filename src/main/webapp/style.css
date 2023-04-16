@@ -1,0 +1,31 @@
+header, nav {
+    margin: 0 auto;
+    text-align: center;
+}
+nav {
+    margin-bottom: 20px;
+}
+.content {
+    margin: 0 auto;
+    width: 65%;
+}
+a button, form button {
+    width: 100px;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+.heading {
+    color: darkgray;
+}
+label {
+    margin-left: 10px;
+    margin-right: -5px;
+}
+input.box {
+    float: right;
+}
+td {
+    width: 15%;
+}
