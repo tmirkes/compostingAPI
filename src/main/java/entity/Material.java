@@ -3,6 +3,9 @@ package entity;
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * The Material database entity class.
+ */
 @Entity(name="Material")
 @Table(name="material", schema="com.posting")
 public class Material {
@@ -17,34 +20,66 @@ public class Material {
     @Column(name = "comments", nullable = false, length = 255)
     private String comments;
 
+    /**
+     * No-argument constructor
+     */
     public Material() {
     }
 
+    /**
+     * Full argument constructor
+     * @param name name value
+     * @param comments comments value
+     */
     public Material(String name, String comments) {
         this.name = name;
         this.comments = comments;
     }
 
+    /**
+     * id getter
+     * @return id value
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * id setter
+     * @param id new id value
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * name getter
+     * @return name value
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * name setter
+     * @param name new name value
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * comments getter
+     * @return comments value
+     */
     public String getComments() {
         return comments;
     }
 
+    /**
+     * comments setter
+     * @param comments new comments value
+     */
     public void setComments(String comments) {
         this.comments = comments;
     }

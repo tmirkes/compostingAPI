@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- * The type Service.
+ * The Service database entity class.
  */
 @Entity(name="Service")
 @Table(name="service", schema="com.posting")
@@ -21,13 +21,13 @@ public class Service {
     private String description;
 
     /**
-     * Instantiates a new Service.
+     * No-argument constructor
      */
     public Service() {
     }
 
     /**
-     * Instantiates a new Service.
+     * Full argument constructor
      *
      * @param name        the name
      * @param description the description
@@ -38,7 +38,7 @@ public class Service {
     }
 
     /**
-     * Gets id.
+     * id getter.
      *
      * @return the id
      */
@@ -47,7 +47,7 @@ public class Service {
     }
 
     /**
-     * Sets id.
+     * id setter
      *
      * @param id the id
      */
@@ -56,36 +56,36 @@ public class Service {
     }
 
     /**
-     * Gets name.
+     * name getter
      *
-     * @return the name
+     * @return name value
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Sets name.
+     * name setter
      *
-     * @param name the name
+     * @param name new name value
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * Gets description.
+     * description getter
      *
-     * @return the description
+     * @return description value
      */
     public String getDescription() {
         return description;
     }
 
     /**
-     * Sets description.
+     * description setter
      *
-     * @param description the description
+     * @param description new description value
      */
     public void setDescription(String description) {
         this.description = description;
