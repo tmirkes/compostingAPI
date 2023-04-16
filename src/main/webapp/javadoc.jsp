@@ -6,4 +6,5 @@
         <c:import url="header.jsp"></c:import>
         <c:import url="nav.jsp"></c:import>
     </body>
+    <c:import url="footer.jsp"></c:import>
 </html>

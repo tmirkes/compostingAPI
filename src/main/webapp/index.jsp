@@ -276,4 +276,5 @@
             </fieldset>
         </div>
     </body>
+    <c:import url="footer.jsp"></c:import>
 </html>
