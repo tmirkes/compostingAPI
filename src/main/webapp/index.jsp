@@ -20,7 +20,7 @@
                                 <button>GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressMA" value="ComPostingv3_war/composting/materialsV1">
+                            <input hidden type="text" id="addressMA" value="${pageContext.request.contextPath}/composting/materialsV1">
                             <label>Format:</label>
                             <label for="plainMA">Text</label>
                             <input type="radio" name="fieldMA" id="plainMA" value="plain_text" required>
@@ -40,7 +40,7 @@
                                 <button>GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressMB" value="ComPostingv3_war/composting/materialsV2">
+                            <input hidden type="text" id="addressMB" value="${pageContext.request.contextPath}/composting/materialsV2">
                             <label for="fieldMB">ID:</label>
                             <input class="box" type="text" name="fieldMB" id="fieldMB" required placeholder="1">
                         </td>
@@ -64,7 +64,7 @@
                                 <button>POST</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressMC" value="ComPostingv3_war/composting/materialsV3">
+                            <input hidden type="text" id="addressMC" value="${pageContext.request.contextPath}/composting/materialsV3">
                             <label for="fieldMD">Name:</label>
                             <input class="box" type="text" name="fieldMD" id="fieldMD" required placeholder="Material name">
                         </td>
@@ -86,7 +86,7 @@
                                 <button>GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressDA" value="ComPostingv3_war/composting/periodsV1">
+                            <input hidden type="text" id="addressDA" value="${pageContext.request.contextPath}/composting/periodsV1">
                             <label>Format:</label>
                             <label for="plainDA">Text</label>
                             <input type="radio" name="fieldDA" id="plainDA" value="plain_text" required>
@@ -106,7 +106,7 @@
                                 <button>GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressDB" value="ComPostingv3_war/composting/periodsV2">
+                            <input hidden type="text" id="addressDB" value="${pageContext.request.contextPath}/composting/periodsV2">
                             <label for="fieldDB">ID:</label>
                             <input class="box" type="text" name="fieldDB" id="fieldDB" required placeholder="1">
                         </td>
@@ -130,7 +130,7 @@
                                 <button>POST</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressDC" value="ComPostingv3_war/composting/periodsV3">
+                            <input hidden type="text" id="addressDC" value="${pageContext.request.contextPath}/composting/periodsV3">
                             <label for="fieldDD">Frequency:</label>
                             <input class="box" type="text" name="fieldSD" id="fieldDD" required placeholder="1">
                         </td>
@@ -152,7 +152,7 @@
                                 <button>GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressPA" value="ComPostingv3_war/composting/pricesV1">
+                            <input hidden type="text" id="addressPA" value="${pageContext.request.contextPath}/composting/pricesV1">
                             <label>Format:</label>
                             <label for="plainPA">Text</label>
                             <input type="radio" name="fieldPA" id="plainPA" value="plain_text" required>
@@ -172,7 +172,7 @@
                                 <button>GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressPB" value="ComPostingv3_war/composting/pricesV2">
+                            <input hidden type="text" id="addressPB" value="${pageContext.request.contextPath}/composting/pricesV2">
                             <label for="fieldPB">ID:</label>
                             <input class="box" type="text" name="fieldPB" id="fieldPB" required placeholder="1">
                         </td>
@@ -196,7 +196,7 @@
                                 <button>POST</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressPC" value="ComPostingv3_war/composting/pricesV3">
+                            <input hidden type="text" id="addressPC" value="${pageContext.request.contextPath}/composting/pricesV3">
                             <label for="fieldPD">Per Unit:</label>
                             <input class="box" type="text" name="fieldPD" id="fieldPD" required placeholder="0.00">
                         </td>
@@ -218,7 +218,7 @@
                                 <button>GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressSA" value="ComPostingv3_war/composting/servicesV1">
+                            <input hidden type="text" id="addressSA" value="${pageContext.request.contextPath}/composting/servicesV1">
                             <label>Format:</label>
                             <label for="plainA">Text</label>
                             <input type="radio" name="fieldSA" id="plainA" value="plain_text" required>
@@ -238,7 +238,7 @@
                                 <button>GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressSB" value="ComPostingv3_war/composting/servicesV2">
+                            <input hidden type="text" id="addressSB" value="${pageContext.request.contextPath}/composting/servicesV2">
                             <label for="fieldSB">ID:</label>
                             <input class="box" type="text" name="fieldSB" id="fieldSB" required placeholder="1">
                         </td>
@@ -259,10 +259,10 @@
                     <tr>
                         <td>
                             <form onsubmit="this.action='/'+this.addressSC.value+'/'+this.fieldSD.value+'/'+this.fieldSE.value;" method="post">
-                                <button onclick="intercept()">POST</button>
+                                <button>POST</button>
                         </td>
                         <td>
-                                <input hidden type="text" id="addressSC" value="ComPostingv3_war/composting/servicesV3">
+                                <input hidden type="text" id="addressSC" value="${pageContext.request.contextPath}/composting/servicesV3">
                                 <label for="fieldSD">Name:</label>
                                 <input class="box" type="text" name="fieldSD" id="fieldSD" required placeholder="Service name">
                         </td>
