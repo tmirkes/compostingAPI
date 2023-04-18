@@ -3,7 +3,10 @@
 <html lang="en">
 <!-- HTML form feeding the URL creation on submit courtesy of https://stackoverflow.com/questions/11811782/form-value-creates-a-url -->
     <c:import url="head.jsp"></c:import>
-    <body>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
         <c:import url="header.jsp"></c:import>
         <c:import url="nav.jsp"></c:import>
         <div class="content">
@@ -83,17 +86,17 @@
                     <tr>
                         <td>
                             <form id="DA" method="get">
-                                <button type="submit" onclick="redirectA('DA')">GET</button>
+                                <button type="submit">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="address" value="/composting/periodsV1">
+                            <input hidden type="text" id="addressDA" value="/composting/periodsV1">
                             <label>Format:</label>
                             <label for="plainDA">Text</label>
-                            <input type="radio" name="field1" id="plainDA" value="plain_text" required>
+                            <input type="radio" name="field1DA" id="plainDA" value="plain_text" required>
                             <label for="htmlDA">HTML</label>
-                            <input type="radio" name="field1" id="htmlDA" value="html">
+                            <input type="radio" name="field1DA" id="htmlDA" value="html">
                             <label for="jsonDA">JSON</label>
-                            <input type="radio" name="field1" id="jsonDA" value="json">
+                            <input type="radio" name="field1DA" id="jsonDA" value="json">
                             </form>
                         </td>
                     </tr>
@@ -106,18 +109,18 @@
                                 <button type="submit" onclick="redirectB('DB')">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="address" value="/composting/periodsV2">
-                            <label for="field1">ID:</label>
-                            <input class="box" type="text" name="field1" id="field1" required placeholder="1">
+                            <input hidden type="text" id="addressDB" value="/composting/periodsV2">
+                            <label for="field1DB">ID:</label>
+                            <input class="box" type="text" name="field1DB" id="field1DB" required placeholder="1">
                         </td>
                         <td>
                             <label>Format:</label>
                             <label for="plainDB">Text</label>
-                            <input type="radio" name="field2" id="plainDB" value="plain_text" required>
+                            <input type="radio" name="field2DB" id="plainDB" value="plain_text" required>
                             <label for="htmlDB">HTML</label>
-                            <input type="radio" name="field2" id="htmlDB" value="html">
+                            <input type="radio" name="field2DB" id="htmlDB" value="html">
                             <label for="jsonDB">JSON</label>
-                            <input type="radio" name="field2" id="jsonDB" value="json">
+                            <input type="radio" name="field2DB" id="jsonDB" value="json">
                             </form>
                         </td>
                     </tr>
@@ -127,16 +130,16 @@
                     <tr>
                         <td>
                             <form id="DC" method="post">
-                                <button type="submit" onclick="redirectB('DC')">POST</button>
+                                <button type="submit">POST</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="address" value="/composting/periodsV3">
-                            <label for="field1">Frequency:</label>
-                            <input class="box" type="text" name="field1" id="field1" required placeholder="1">
+                            <input hidden type="text" id="addressDC" value="/composting/periodsV3">
+                            <label for="field1DC">Frequency:</label>
+                            <input class="box" type="text" name="field1DC" id="field1DC" required placeholder="1">
                         </td>
                         <td>
-                            <label for="field2">Time Unit:</label>
-                            <input class="box" type="text" name="field2" id="field2" required placeholder="Measure of time">
+                            <label for="field2DC">Time Unit:</label>
+                            <input class="box" type="text" name="field2DC" id="field2DC" required placeholder="Measure of time">
                             </form>
                         </td>
                     </tr>
@@ -149,17 +152,17 @@
                     <tr>
                         <td>
                             <form id="PA" method="get">
-                                <button type="submit" onclick="redirectA('PA')">GET</button>
+                                <button type="submit">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="address" value="/composting/pricesV1">
+                            <input hidden type="text" id="addressPA" value="/composting/pricesV1">
                             <label>Format:</label>
                             <label for="plainPA">Text</label>
-                            <input type="radio" name="field1" id="plainPA" value="plain_text" required>
+                            <input type="radio" name="field1PA" id="plainPA" value="plain_text" required>
                             <label for="htmlPA">HTML</label>
-                            <input type="radio" name="field1" id="htmlPA" value="html">
+                            <input type="radio" name="field1PA" id="htmlPA" value="html">
                             <label for="jsonPA">JSON</label>
-                            <input type="radio" name="field1" id="jsonPA" value="json">
+                            <input type="radio" name="field1PA" id="jsonPA" value="json">
                             </form>
                         </td>
                     </tr>
@@ -169,21 +172,21 @@
                     <tr>
                         <td>
                             <form id="PB" method="get">
-                                <button type="submit" onclick="redirectB('PB')">GET</button>
+                                <button type="submit">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="address" value="/composting/pricesV2">
-                            <label for="field1">ID:</label>
-                            <input class="box" type="text" name="field1" id="field1" required placeholder="1">
+                            <input hidden type="text" id="addressPB" value="/composting/pricesV2">
+                            <label for="field1PB">ID:</label>
+                            <input class="box" type="text" name="field1PB" id="field1PB" required placeholder="1">
                         </td>
                         <td>
                             <label>Format:</label>
                             <label for="plainPB">Text</label>
-                            <input type="radio" name="field2" id="plainPB" value="plain_text" required>
+                            <input type="radio" name="field2PB" id="plainPB" value="plain_text" required>
                             <label for="htmlPB">HTML</label>
-                            <input type="radio" name="field2" id="htmlPB" value="html">
+                            <input type="radio" name="field2PB" id="htmlPB" value="html">
                             <label for="jsonPB">JSON</label>
-                            <input type="radio" name="field2" id="jsonPB" value="json">
+                            <input type="radio" name="field2PB" id="jsonPB" value="json">
                             </form>
                         </td>
                     </tr>
@@ -193,16 +196,16 @@
                     <tr>
                         <td>
                             <form id="PC" method="post">
-                                <button type="submit" onclick="redirectB('PC')">POST</button>
+                                <button type="submit">POST</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="address" value="/composting/pricesV3">
-                            <label for="field1">Per Unit:</label>
-                            <input class="box" type="text" name="field1" id="field1" required placeholder="0.00">
+                            <input hidden type="text" id="addressPC" value="/composting/pricesV3">
+                            <label for="field1PC">Per Unit:</label>
+                            <input class="box" type="text" name="field1PC" id="field1PC" required placeholder="0.00">
                         </td>
                         <td>
-                            <label for="field2">Unit Type:</label>
-                            <input class="box" type="text" name="field2" id="field2" required placeholder="Unit of measure">
+                            <label for="field2PC">Unit Type:</label>
+                            <input class="box" type="text" name="field2PC" id="field2PC" required placeholder="Unit of measure">
                             </form>
                         </td>
                     </tr>
@@ -215,17 +218,17 @@
                     <tr>
                         <td>
                             <form id="SA" method="get">
-                                <button type="submit" onclick="redirectA('SA')">GET</button>
+                                <button type="submit">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="address" value="/composting/servicesV1">
+                            <input hidden type="text" id="addressSA" value="/composting/servicesV1">
                             <label>Format:</label>
                             <label for="plainA">Text</label>
-                            <input type="radio" name="field1" id="plainA" value="plain_text" required>
+                            <input type="radio" name="field1SA" id="plainA" value="plain_text" required>
                             <label for="htmlA">HTML</label>
-                            <input type="radio" name="field1" id="htmlA" value="html">
+                            <input type="radio" name="field1SA" id="htmlA" value="html">
                             <label for="jsonA">JSON</label>
-                            <input type="radio" name="field1" id="jsonA" value="json">
+                            <input type="radio" name="field1SA" id="jsonA" value="json">
                             </form>
                         </td>
                     </tr>
@@ -235,21 +238,21 @@
                     <tr>
                         <td>
                             <form id="SB" method="get">
-                                <button type="submit" onclick="redirectB('SB')">GET</button>
+                                <button type="submit">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="address" value="/composting/servicesV2">
-                            <label for="field1">ID:</label>
-                            <input class="box" type="text" name="field1" id="field1" required placeholder="1">
+                            <input hidden type="text" id="addressSB" value="/composting/servicesV2">
+                            <label for="field1SB">ID:</label>
+                            <input class="box" type="text" name="field1SB" id="field1SB" required placeholder="1">
                         </td>
                         <td>
                             <label>Format:</label>
                             <label for="plainB">Text</label>
-                            <input type="radio" name="field2" id="plainB" value="plain_text" required>
+                            <input type="radio" name="field2SB" id="plainB" value="plain_text" required>
                             <label for="htmlB">HTML</label>
-                            <input type="radio" name="field2" id="htmlB" value="html">
+                            <input type="radio" name="field2SB" id="htmlB" value="html">
                             <label for="jsonB">JSON</label>
-                            <input type="radio" name="field2" id="jsonB" value="json">
+                            <input type="radio" name="field2SB" id="jsonB" value="json">
                             </form>
                         </td>
                     </tr>
@@ -259,16 +262,16 @@
                     <tr>
                         <td>
                             <form id="SC" method="post">
-                                <button type="submit" onclick="redirectB('SC')">POST</button>
+                                <button type="submit">POST</button>
                         </td>
                         <td>
-                                <input hidden type="text" id="address" value="/composting/servicesV3">
-                                <label for="field1">Name:</label>
-                                <input class="box" type="text" name="field1" id="field1" required placeholder="Service name">
+                                <input hidden type="text" id="addressSC" value="/composting/servicesV3">
+                                <label for="field1SC">Name:</label>
+                                <input class="box" type="text" name="field1SC" id="field1SC" required placeholder="Service name">
                         </td>
                         <td>
-                                <label for="field2">Description:</label>
-                                <input class="box" type="text" name="field2" id="field2" required placeholder="Summary of Service work">
+                                <label for="field2SC">Description:</label>
+                                <input class="box" type="text" name="field2SC" id="field2SC" required placeholder="Summary of Service work">
                             </form>
                         </td>
                     </tr>
