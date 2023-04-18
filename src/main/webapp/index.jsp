@@ -16,18 +16,18 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressMA.value+'/'+this.fieldMA.value;" method="get">
-                                <button>GET</button>
+                            <form id="MA" method="get">
+                                <button type="submit">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressMA" value="${pageContext.request.contextPath}/composting/materialsV1">
+                            <input hidden type="text" id="addressMA" value="/composting/materialsV1">
                             <label>Format:</label>
                             <label for="plainMA">Text</label>
-                            <input type="radio" name="fieldMA" id="plainMA" value="plain_text" required>
+                            <input type="radio" name="field1MA" id="plainMA" value="plain_text" required>
                             <label for="htmlMA">HTML</label>
-                            <input type="radio" name="fieldMA" id="htmlMA" value="html">
+                            <input type="radio" name="field1MA" id="htmlMA" value="html">
                             <label for="jsonMA">JSON</label>
-                            <input type="radio" name="fieldMA" id="jsonMA" value="json">
+                            <input type="radio" name="field1MA" id="jsonMA" value="json">
                             </form>
                         </td>
                     </tr>
@@ -36,22 +36,22 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressMB.value+'/'+this.fieldMB.value+'/'+this.fieldMC.value;" method="get">
-                                <button>GET</button>
+                            <form id="MB" method="get">
+                                <button type="submit">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressMB" value="${pageContext.request.contextPath}/composting/materialsV2">
-                            <label for="fieldMB">ID:</label>
-                            <input class="box" type="text" name="fieldMB" id="fieldMB" required placeholder="1">
+                            <input hidden type="text" id="addressMB" value="/composting/materialsV2">
+                            <label for="field1MB">ID:</label>
+                            <input class="box" type="text" name="field1MB" id="field1MB" required placeholder="1">
                         </td>
                         <td>
                             <label>Format:</label>
                             <label for="plainMB">Text</label>
-                            <input type="radio" name="fieldMC" id="plainMB" value="plain_text" required>
+                            <input type="radio" name="field2MB" id="plainMB" value="plain_text" required>
                             <label for="htmlMB">HTML</label>
-                            <input type="radio" name="fieldMC" id="htmlMB" value="html">
+                            <input type="radio" name="field2MB" id="htmlMB" value="html">
                             <label for="jsonMB">JSON</label>
-                            <input type="radio" name="fieldMC" id="jsonMB" value="json">
+                            <input type="radio" name="field2MB" id="jsonMB" value="json">
                             </form>
                         </td>
                     </tr>
@@ -60,17 +60,17 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressMC.value+'/'+this.fieldMD.value+'/'+this.fieldME.value;" method="post">
-                                <button>POST</button>
+                            <form id="MC" method="post">
+                                <button type="submit">POST</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressMC" value="${pageContext.request.contextPath}/composting/materialsV3">
-                            <label for="fieldMD">Name:</label>
-                            <input class="box" type="text" name="fieldMD" id="fieldMD" required placeholder="Material name">
+                            <input hidden type="text" id="addressMC" value="/composting/materialsV3">
+                            <label for="field1MC">Name:</label>
+                            <input class="box" type="text" name="field1MC" id="field1MC" required placeholder="Material name">
                         </td>
                         <td>
-                            <label for="fieldME">Comments:</label>
-                            <input class="box" type="text" name="fieldME" id="fieldME" required placeholder="Additional details">
+                            <label for="field2MC">Comments:</label>
+                            <input class="box" type="text" name="field2MC" id="field2MC" required placeholder="Additional details">
                             </form>
                         </td>
                     </tr>
@@ -82,18 +82,18 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressDA.value+'/'+this.fieldDA.value;" method="get">
-                                <button>GET</button>
+                            <form id="DA" method="get">
+                                <button type="submit" onclick="redirectA('DA')">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressDA" value="${pageContext.request.contextPath}/composting/periodsV1">
+                            <input hidden type="text" id="address" value="/composting/periodsV1">
                             <label>Format:</label>
                             <label for="plainDA">Text</label>
-                            <input type="radio" name="fieldDA" id="plainDA" value="plain_text" required>
+                            <input type="radio" name="field1" id="plainDA" value="plain_text" required>
                             <label for="htmlDA">HTML</label>
-                            <input type="radio" name="fieldDA" id="htmlDA" value="html">
+                            <input type="radio" name="field1" id="htmlDA" value="html">
                             <label for="jsonDA">JSON</label>
-                            <input type="radio" name="fieldDA" id="jsonDA" value="json">
+                            <input type="radio" name="field1" id="jsonDA" value="json">
                             </form>
                         </td>
                     </tr>
@@ -102,22 +102,22 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressDB.value+'/'+this.fieldDB.value+'/'+this.fieldDC.value;" method="get">
-                                <button>GET</button>
+                            <form id="DB" method="get">
+                                <button type="submit" onclick="redirectB('DB')">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressDB" value="${pageContext.request.contextPath}/composting/periodsV2">
-                            <label for="fieldDB">ID:</label>
-                            <input class="box" type="text" name="fieldDB" id="fieldDB" required placeholder="1">
+                            <input hidden type="text" id="address" value="/composting/periodsV2">
+                            <label for="field1">ID:</label>
+                            <input class="box" type="text" name="field1" id="field1" required placeholder="1">
                         </td>
                         <td>
                             <label>Format:</label>
                             <label for="plainDB">Text</label>
-                            <input type="radio" name="fieldDC" id="plainDB" value="plain_text" required>
+                            <input type="radio" name="field2" id="plainDB" value="plain_text" required>
                             <label for="htmlDB">HTML</label>
-                            <input type="radio" name="fieldDC" id="htmlDB" value="html">
+                            <input type="radio" name="field2" id="htmlDB" value="html">
                             <label for="jsonDB">JSON</label>
-                            <input type="radio" name="fieldDC" id="jsonDB" value="json">
+                            <input type="radio" name="field2" id="jsonDB" value="json">
                             </form>
                         </td>
                     </tr>
@@ -126,17 +126,17 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressDC.value+'/'+this.fieldDD.value+'/'+this.fieldDE.value;" method="post">
-                                <button>POST</button>
+                            <form id="DC" method="post">
+                                <button type="submit" onclick="redirectB('DC')">POST</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressDC" value="${pageContext.request.contextPath}/composting/periodsV3">
-                            <label for="fieldDD">Frequency:</label>
-                            <input class="box" type="text" name="fieldSD" id="fieldDD" required placeholder="1">
+                            <input hidden type="text" id="address" value="/composting/periodsV3">
+                            <label for="field1">Frequency:</label>
+                            <input class="box" type="text" name="field1" id="field1" required placeholder="1">
                         </td>
                         <td>
-                            <label for="fieldDE">Time Unit:</label>
-                            <input class="box" type="text" name="fieldDE" id="fieldDE" required placeholder="Measure of time">
+                            <label for="field2">Time Unit:</label>
+                            <input class="box" type="text" name="field2" id="field2" required placeholder="Measure of time">
                             </form>
                         </td>
                     </tr>
@@ -148,18 +148,18 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressPA.value+'/'+this.fieldPA.value;" method="get">
-                                <button>GET</button>
+                            <form id="PA" method="get">
+                                <button type="submit" onclick="redirectA('PA')">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressPA" value="${pageContext.request.contextPath}/composting/pricesV1">
+                            <input hidden type="text" id="address" value="/composting/pricesV1">
                             <label>Format:</label>
                             <label for="plainPA">Text</label>
-                            <input type="radio" name="fieldPA" id="plainPA" value="plain_text" required>
+                            <input type="radio" name="field1" id="plainPA" value="plain_text" required>
                             <label for="htmlPA">HTML</label>
-                            <input type="radio" name="fieldPA" id="htmlPA" value="html">
+                            <input type="radio" name="field1" id="htmlPA" value="html">
                             <label for="jsonPA">JSON</label>
-                            <input type="radio" name="fieldPA" id="jsonPA" value="json">
+                            <input type="radio" name="field1" id="jsonPA" value="json">
                             </form>
                         </td>
                     </tr>
@@ -168,22 +168,22 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressPB.value+'/'+this.fieldPB.value+'/'+this.fieldPC.value;" method="get">
-                                <button>GET</button>
+                            <form id="PB" method="get">
+                                <button type="submit" onclick="redirectB('PB')">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressPB" value="${pageContext.request.contextPath}/composting/pricesV2">
-                            <label for="fieldPB">ID:</label>
-                            <input class="box" type="text" name="fieldPB" id="fieldPB" required placeholder="1">
+                            <input hidden type="text" id="address" value="/composting/pricesV2">
+                            <label for="field1">ID:</label>
+                            <input class="box" type="text" name="field1" id="field1" required placeholder="1">
                         </td>
                         <td>
                             <label>Format:</label>
                             <label for="plainPB">Text</label>
-                            <input type="radio" name="fieldPC" id="plainPB" value="plain_text" required>
+                            <input type="radio" name="field2" id="plainPB" value="plain_text" required>
                             <label for="htmlPB">HTML</label>
-                            <input type="radio" name="fieldPC" id="htmlPB" value="html">
+                            <input type="radio" name="field2" id="htmlPB" value="html">
                             <label for="jsonPB">JSON</label>
-                            <input type="radio" name="fieldPC" id="jsonPB" value="json">
+                            <input type="radio" name="field2" id="jsonPB" value="json">
                             </form>
                         </td>
                     </tr>
@@ -192,17 +192,17 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressPC.value+'/'+this.fieldPD.value+'/'+this.fieldPE.value;" method="post">
-                                <button>POST</button>
+                            <form id="PC" method="post">
+                                <button type="submit" onclick="redirectB('PC')">POST</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressPC" value="${pageContext.request.contextPath}/composting/pricesV3">
-                            <label for="fieldPD">Per Unit:</label>
-                            <input class="box" type="text" name="fieldPD" id="fieldPD" required placeholder="0.00">
+                            <input hidden type="text" id="address" value="/composting/pricesV3">
+                            <label for="field1">Per Unit:</label>
+                            <input class="box" type="text" name="field1" id="field1" required placeholder="0.00">
                         </td>
                         <td>
-                            <label for="fieldPE">Unit Type:</label>
-                            <input class="box" type="text" name="fieldPE" id="fieldPE" required placeholder="Unit of measure">
+                            <label for="field2">Unit Type:</label>
+                            <input class="box" type="text" name="field2" id="field2" required placeholder="Unit of measure">
                             </form>
                         </td>
                     </tr>
@@ -214,18 +214,18 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressSA.value+'/'+this.fieldSA.value;" method="get">
-                                <button>GET</button>
+                            <form id="SA" method="get">
+                                <button type="submit" onclick="redirectA('SA')">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressSA" value="${pageContext.request.contextPath}/composting/servicesV1">
+                            <input hidden type="text" id="address" value="/composting/servicesV1">
                             <label>Format:</label>
                             <label for="plainA">Text</label>
-                            <input type="radio" name="fieldSA" id="plainA" value="plain_text" required>
+                            <input type="radio" name="field1" id="plainA" value="plain_text" required>
                             <label for="htmlA">HTML</label>
-                            <input type="radio" name="fieldSA" id="htmlA" value="html">
+                            <input type="radio" name="field1" id="htmlA" value="html">
                             <label for="jsonA">JSON</label>
-                            <input type="radio" name="fieldSA" id="jsonA" value="json">
+                            <input type="radio" name="field1" id="jsonA" value="json">
                             </form>
                         </td>
                     </tr>
@@ -234,22 +234,22 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressSB.value+'/'+this.fieldSB.value+'/'+this.fieldSC.value;" method="get">
-                                <button>GET</button>
+                            <form id="SB" method="get">
+                                <button type="submit" onclick="redirectB('SB')">GET</button>
                         </td>
                         <td>
-                            <input hidden type="text" id="addressSB" value="${pageContext.request.contextPath}/composting/servicesV2">
-                            <label for="fieldSB">ID:</label>
-                            <input class="box" type="text" name="fieldSB" id="fieldSB" required placeholder="1">
+                            <input hidden type="text" id="address" value="/composting/servicesV2">
+                            <label for="field1">ID:</label>
+                            <input class="box" type="text" name="field1" id="field1" required placeholder="1">
                         </td>
                         <td>
                             <label>Format:</label>
                             <label for="plainB">Text</label>
-                            <input type="radio" name="fieldSC" id="plainB" value="plain_text" required>
+                            <input type="radio" name="field2" id="plainB" value="plain_text" required>
                             <label for="htmlB">HTML</label>
-                            <input type="radio" name="fieldSC" id="htmlB" value="html">
+                            <input type="radio" name="field2" id="htmlB" value="html">
                             <label for="jsonB">JSON</label>
-                            <input type="radio" name="fieldSC" id="jsonB" value="json">
+                            <input type="radio" name="field2" id="jsonB" value="json">
                             </form>
                         </td>
                     </tr>
@@ -258,23 +258,26 @@
                     </tr>
                     <tr>
                         <td>
-                            <form onsubmit="this.action='/'+this.addressSC.value+'/'+this.fieldSD.value+'/'+this.fieldSE.value;" method="post">
-                                <button>POST</button>
+                            <form id="SC" method="post">
+                                <button type="submit" onclick="redirectB('SC')">POST</button>
                         </td>
                         <td>
-                                <input hidden type="text" id="addressSC" value="${pageContext.request.contextPath}/composting/servicesV3">
-                                <label for="fieldSD">Name:</label>
-                                <input class="box" type="text" name="fieldSD" id="fieldSD" required placeholder="Service name">
+                                <input hidden type="text" id="address" value="/composting/servicesV3">
+                                <label for="field1">Name:</label>
+                                <input class="box" type="text" name="field1" id="field1" required placeholder="Service name">
                         </td>
                         <td>
-                                <label for="fieldSE">Description:</label>
-                                <input class="box" type="text" name="fieldSE" id="fieldSE" required placeholder="Summary of Service work">
+                                <label for="field2">Description:</label>
+                                <input class="box" type="text" name="field2" id="field2" required placeholder="Summary of Service work">
                             </form>
                         </td>
                     </tr>
                 </table>
             </fieldset>
         </div>
+    <script type="text/javascript">
+        init();
+    </script>
     </body>
     <c:import url="footer.jsp"></c:import>
 </html>

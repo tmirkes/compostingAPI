@@ -4,4 +4,5 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Com.Posting API</title>
     <link rel="stylesheet" href="style.css">
+    <script src="intercept.js"></script>
 </head>
