@@ -20,21 +20,21 @@ function init() {
 function redirectA(formId) {
     let addressField = document.querySelector(`#address${formId}`).value;
     let dataFieldA = document.querySelector(`input[name=field1${formId}]:checked`).value;
-    let url = `http://localhost:8080/ComPostingv3_war${addressField}/${dataFieldA}`;
+    let url = `http://compostingapi-env.eba-x3jcxyuh.us-east-2.elasticbeanstalk.com${addressField}/${dataFieldA}`;
     window.location.href = url;
 }
 function redirectB(formId) {
     let addressField = document.querySelector(`#address${formId}`).value;
     let dataFieldA = document.querySelector(`input[name=field1${formId}]`).value;
     let dataFieldB = document.querySelector(`input[name=field2${formId}]:checked`).value;
-    let url = `http://localhost:8080/ComPostingv3_war${addressField}/${dataFieldA}/${dataFieldB}`;
+    let url = `http://compostingapi-env.eba-x3jcxyuh.us-east-2.elasticbeanstalk.com${addressField}/${dataFieldA}/${dataFieldB}`;
     window.location.href = url;
 }
 function redirectC(formId) {
     let addressField = document.querySelector(`#address${formId}`).value;
     let dataFieldA = document.querySelector(`input[name=field1${formId}]`).value;
     let dataFieldB = document.querySelector(`input[name=field2${formId}]`).value;
-    let url = `http://localhost:8080/ComPostingv3_war${addressField}/${dataFieldA}/${dataFieldB}`;
+    let url = `http://compostingapi-env.eba-x3jcxyuh.us-east-2.elasticbeanstalk.com${addressField}/${dataFieldA}/${dataFieldB}`;
     document.body.innerHTML += `<form id="postForm" style="display: none" action="${url}" method="post"></form>`;
     let form = document.getElementById("postForm");
     form.submit();

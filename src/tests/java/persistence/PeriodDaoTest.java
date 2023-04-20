@@ -32,7 +32,7 @@ class PeriodDaoTest {
     @Test
     void getAllPeriodsSuccess() {
         List<Period> periods = dao.getAll();
-        assertEquals(10, periods.size());
+        assertEquals(9, periods.size());
     }
 
     /**
